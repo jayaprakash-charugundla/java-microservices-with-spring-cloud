@@ -1,3 +1,15 @@
 spring:
   application:
     name: tollrate-ui
+
+eureka:
+  client:
+    #service-url: localhost:8761
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    instance-id: ${spring.application.name}:${random.int}
+    hostname: localhost
+
+server:
+  port: 8081

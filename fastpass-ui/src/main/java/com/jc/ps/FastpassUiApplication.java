@@ -2,6 +2,9 @@ package com.jc.ps;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.reactive.function.client.WebClient;
 
 @SpringBootApplication
 public class FastpassUiApplication {
@@ -10,4 +13,9 @@ public class FastpassUiApplication {
 		SpringApplication.run(FastpassUiApplication.class, args);
 	}
 
+	@Bean
+	@LoadBalanced
+	public WebClient.Builder loadBalancedWebClientBuilder() {
+		return WebClient.builder();
+	}
 }

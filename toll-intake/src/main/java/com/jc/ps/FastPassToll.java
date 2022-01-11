@@ -11,4 +11,5 @@ public class FastPassToll {
     private String fastPassId;
     private String stationId;
     private Float amountPaid;
+    private String status;
 }

@@ -31,10 +31,18 @@ docker run -d --hostname local-rabbit --name pluralsight-rmq -p 15672:15672 -p 5
 http://localhost:15672  
 guest/guest  
 
+Add a new exchange
+------------------
+name: fastpassprocessor  
+type: topic  
 
+Add a new queue
+---------------
+type: Classic
+Name: statusqueue  
 
-
-
-
-
+statusqueue -> Bindings
+-----------------------
+From exchange: fastpassprocessor  
+Routing key: #  
 

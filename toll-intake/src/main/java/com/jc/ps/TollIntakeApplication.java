@@ -2,6 +2,7 @@ package com.jc.ps;
 
 import java.util.Scanner;
 import java.util.function.Consumer;
+import java.util.function.Function;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,10 +15,19 @@ public class TollIntakeApplication implements CommandLineRunner {
 		SpringApplication.run(TollIntakeApplication.class, args);
 	}
 
-	@Bean
+	//@Bean
 	public Consumer<FastPassToll> readTollCharge() {
 		return value -> {
 			System.out.println("Received message for customer " + value.getFastPassId() + " at " + value.getStationId());
+		};
+	}
+
+	@Bean
+	public Function<FastPassToll, FastPassToll> processTollCharge() {
+		return value -> {
+			System.out.println("Processing message");
+			value.setStatus("processed");
+			return value;
 		};
 	}
 

@@ -11,3 +11,17 @@ http://localhost:8082/customerdetails?fastpassid=802
 
 http://localhost:8081/actuator/circuitbreakers  
 http://localhost:8081/actuator/circuitbreakerevents  
+
+http://localhost:9090/targets  
+
+http://localhost:3000  
+admin/admin  
+
+Setup datasource
+----------------
+Configuration -> Data sources -> Add data source -> Prometheus   
+Import json file  
+
+
+
+

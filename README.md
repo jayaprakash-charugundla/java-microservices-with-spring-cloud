@@ -22,6 +22,8 @@ Setup datasource
 Configuration -> Data sources -> Add data source -> Prometheus   
 Import json file  
 
+http://localhost:8080/tollrate/1003  
+
 
 
 

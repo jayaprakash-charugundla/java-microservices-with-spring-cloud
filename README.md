@@ -27,6 +27,9 @@ http://localhost:8080/tollrate/1003
 http://localhost:8080/v1/tollrate/1001  
 http://localhost:8080/v2/tollrate/1001  
 
+docker run -d --hostname local-rabbit --name pluralsight-rmq -p 15672:15672 -p 5672:5672 rabbitmq:3.9.9-management  
+http://localhost:15672  
+guest/guest  
 
 
 

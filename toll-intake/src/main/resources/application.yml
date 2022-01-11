@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: toll-intake
+
+server:
+  port: 0

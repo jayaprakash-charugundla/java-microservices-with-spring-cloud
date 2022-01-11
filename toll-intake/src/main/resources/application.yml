@@ -2,7 +2,12 @@ spring:
   application:
     name: toll-intake
   cloud:
+    function:
+      routing-expression: "headers['speed'] == 'fast' ? 'readTollChargeFast': 'readTollChargeSlow'"
     stream:
+      function:
+        routing:
+          enabled: true
       bindings:
         readtollcharge-in-0:
           destination: tolltopic
@@ -13,6 +18,10 @@ spring:
         processtollcharge-out-0:
           destination: fastpassprocessor
           content-type: application/json
+        functionRouter-in-0:
+          destination: tolltopic
+          content-type: application/json
+
   rabbitmq:
     host: 127.0.0.1
     port: 5672

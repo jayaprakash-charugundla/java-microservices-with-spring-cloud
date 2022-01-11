@@ -7,6 +7,9 @@ spring:
         generatetollcharge-out-0:
           destination: tolltopic
           content-type: application/json
+        generatethreecharges-out-0:
+          destination: tolltopic
+          content-type: application/json
   rabbitmq:
     host: 127.0.0.1
     port: 5672

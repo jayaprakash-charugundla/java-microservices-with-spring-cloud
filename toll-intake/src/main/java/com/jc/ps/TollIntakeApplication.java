@@ -23,6 +23,20 @@ public class TollIntakeApplication implements CommandLineRunner {
 	}
 
 	@Bean
+	public Consumer<FastPassToll> readTollChargeFast() {
+		return value -> {
+			System.out.println("Received message for (fast) customer " + value.getFastPassId() + " at " + value.getStationId());
+		};
+	}
+
+	@Bean
+	public Consumer<FastPassToll> readTollChargeSlow() {
+		return value -> {
+			System.out.println("Received message for (slow) customer " + value.getFastPassId() + " at " + value.getStationId());
+		};
+	}
+
+	//@Bean
 	public Function<FastPassToll, FastPassToll> processTollCharge() {
 		return value -> {
 			System.out.println("Processing message");

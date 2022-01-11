@@ -24,6 +24,14 @@ Import json file
 
 http://localhost:8080/tollrate/1003  
 
+http://localhost:8080/v1/tollrate/1001  
+http://localhost:8080/v2/tollrate/1001  
+
+
+
+
+
+
 
 
 

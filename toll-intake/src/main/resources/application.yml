@@ -1,6 +1,17 @@
 spring:
   application:
     name: toll-intake
+  cloud:
+    stream:
+      bindings:
+        readtollcharge-in-0:
+          destination: tolltopic
+          content-type: application/json
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
 
 server:
   port: 0

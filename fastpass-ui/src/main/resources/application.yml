@@ -1,6 +1,17 @@
 spring:
   application:
     name: fastpass-ui
+  cloud:
+    stream:
+      bindings:
+        generatetollcharge-out-0:
+          destination: tolltopic
+          content-type: application/json
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
 
 eureka:
   client:
@@ -13,3 +24,4 @@ eureka:
 
 server:
   port: 8082
+

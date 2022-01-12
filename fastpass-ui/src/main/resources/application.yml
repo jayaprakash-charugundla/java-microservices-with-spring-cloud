@@ -7,6 +7,9 @@ spring:
         generatetollcharge-out-0:
           destination: tolltopic
           content-type: application/json
+          producer:
+            partition-key-expression: payload.fastPassId
+            partition-count: 3
         generatethreecharges-out-0:
           destination: tolltopic
           content-type: application/json

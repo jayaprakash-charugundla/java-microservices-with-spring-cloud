@@ -13,6 +13,8 @@ spring:
           group: tollgroup
           destination: tolltopic
           content-type: application/json
+          consumer:
+            partitioned: true
         processtollcharge-in-0:
           destination: tolltopic
           content-type: application/json
@@ -22,6 +24,7 @@ spring:
         #functionRouter-in-0:
           #destination: tolltopic
           #content-type: application/json
+      instance-count: 3
 
   rabbitmq:
     host: 127.0.0.1

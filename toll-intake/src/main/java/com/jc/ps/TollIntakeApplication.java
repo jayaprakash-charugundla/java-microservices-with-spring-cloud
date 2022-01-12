@@ -48,7 +48,5 @@ public class TollIntakeApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		System.out.println("Listening for messages...");
-		Scanner scanner = new Scanner(System.in);
-		String line = scanner.nextLine();
 	}
 }

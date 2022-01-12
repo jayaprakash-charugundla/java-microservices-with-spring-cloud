@@ -15,21 +15,21 @@ public class TollIntakeApplication implements CommandLineRunner {
 		SpringApplication.run(TollIntakeApplication.class, args);
 	}
 
-	//@Bean
+	@Bean
 	public Consumer<FastPassToll> readTollCharge() {
 		return value -> {
 			System.out.println("Received message for customer " + value.getFastPassId() + " at " + value.getStationId());
 		};
 	}
 
-	@Bean
+	//@Bean
 	public Consumer<FastPassToll> readTollChargeFast() {
 		return value -> {
 			System.out.println("Received message for (fast) customer " + value.getFastPassId() + " at " + value.getStationId());
 		};
 	}
 
-	@Bean
+	//@Bean
 	public Consumer<FastPassToll> readTollChargeSlow() {
 		return value -> {
 			System.out.println("Received message for (slow) customer " + value.getFastPassId() + " at " + value.getStationId());

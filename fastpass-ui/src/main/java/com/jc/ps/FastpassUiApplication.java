@@ -32,7 +32,7 @@ public class FastpassUiApplication {
         return () -> new FastPassToll("800", "1001", 1.05f);
     }
 
-    @Bean
+    //@Bean
     public Supplier<Flux<Message<FastPassToll>>> generateThreeCharges() {
         List<Message<FastPassToll>> tolls = new ArrayList<>();
         tolls.add(MessageBuilder.withPayload(new FastPassToll("800", "1001", 1.05f))

@@ -46,9 +46,12 @@ statusqueue -> Bindings
 From exchange: fastpassprocessor  
 Routing key: #  
 
+Config server
+-------------
 http://localhost:8888/app1/default  
-http://localhost:8888/app2/default
-http://localhost:8888/app3/default 
+http://localhost:8888/app2/default  
+http://localhost:8888/app3/default  
+
 
 
 

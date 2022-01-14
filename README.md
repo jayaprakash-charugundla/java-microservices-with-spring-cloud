@@ -52,6 +52,14 @@ http://localhost:8888/app1/default
 http://localhost:8888/app2/default  
 http://localhost:8888/app3/default  
 
+http://localhost:8888/s1rates/default/master  
+http://localhost:8888/s1rates/dev/master  
+http://localhost:8888/s2rates/default/master  
+
+http://localhost:8888/s1rates/perf/master  
+http://localhost:8888/s3rates/perf/master  
+
+
 
 
 

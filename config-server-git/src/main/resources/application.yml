@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: config-server-git
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/jayaprakash-charugundla/spring-cloud-config-wa-tolls
+          search-paths:
+            - station*
+          repos:
+            perf:
+              pattern: '*/perf'
+              uri: https://github.com/jayaprakash-charugundla/spring-cloud-config-wa-tolls-perf
+              search-paths:
+                - station*
+
+server:
+  port: 8888
+

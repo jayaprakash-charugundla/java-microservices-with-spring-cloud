@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: web-function
+  cloud:
+    function:
+      definition: retrieveStation

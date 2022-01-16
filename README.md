@@ -64,6 +64,15 @@ http://localhost:8080/rate
 
 POST localhost:8080/actuator/refresh  
 
+Spring Cloud Function
+---------------------
+POST localhost:8080/retrieveStation  
+Body 111C  
+
+GET localhost:8080/retrieveStation/111C  
+
+
+
 
 
 

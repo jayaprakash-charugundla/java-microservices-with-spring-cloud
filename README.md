@@ -71,6 +71,19 @@ Body 111C
 
 GET localhost:8080/retrieveStation/111C  
 
+POST localhost:8080/processTollRecord  
+Body {"stationId":"111C","licensePlate":"SPRINGLVR","timestamp":"2021-11-20T08:00:00"}  
+
+POST localhost:8080/processTollRecordReactive  
+Body {"stationId":"111C","licensePlate":"SPRINGLVR","timestamp":"2021-11-20T08:00:00"}  
+
+POST localhost:8080/processListOfTollRecordsReactive  
+Body [{"stationId":"111C","licensePlate":"SPRINGLVR111","timestamp":"2021-11-20T08:00:00"},{"stationId":"112C","licensePlate":"SPRINGLVR112","timestamp":"2021-11-21T08:00:00"}]  
+
+GET localhost:8080/getTollStations  
+
+
+
 
 
 

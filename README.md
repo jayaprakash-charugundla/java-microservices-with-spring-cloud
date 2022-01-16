@@ -62,6 +62,10 @@ http://localhost:8888/s3rates/perf/master
 http://localhost:8080/rate  
 
 
+POST localhost:8080/actuator/refresh  
+
+
+
 
 
 

@@ -2,7 +2,7 @@ spring:
   application:
     name: s1rates
   profiles:
-    active: qa
+    active: default
   config:
     import: optional:configserver:http://localhost:8888
   cloud:
@@ -13,3 +13,9 @@ spring:
 
 encrypt:
   key: ABCDEFGHIJKLMNOPQRSTUVWXYZ
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh

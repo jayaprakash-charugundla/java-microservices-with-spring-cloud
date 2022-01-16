@@ -14,7 +14,10 @@ spring:
               uri: https://github.com/jayaprakash-charugundla/spring-cloud-config-wa-tolls-perf
               search-paths:
                 - station*
+  security:
+    user:
+      name: pluralsight
+      password: pluralsight
 
 server:
   port: 8888
-

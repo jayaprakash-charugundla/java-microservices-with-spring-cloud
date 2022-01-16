@@ -8,3 +8,5 @@ spring:
   cloud:
     config:
       label: master
+      username: pluralsight
+      password: pluralsight

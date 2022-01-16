@@ -82,6 +82,25 @@ Body [{"stationId":"111C","licensePlate":"SPRINGLVR111","timestamp":"2021-11-20T
 
 GET localhost:8080/getTollStations  
 
+Manually create spans
+---------------------
+@Autowired  
+private Tracer tracer;  
+
+Span dbSpan = this.tracer.nextSpan().name("DBLookup);  
+try(Tracer.SpanInScpoe ws = this.tracer.withSpan(dbSpan.start())) {  
+    dbSpan.tag("call", "sql-database");  
+    // code  
+    dbSpan.event("db lookup complete");  
+}  finally {  
+    dbSpan.end();  
+}
+
+
+
+
+
+
 
 
 

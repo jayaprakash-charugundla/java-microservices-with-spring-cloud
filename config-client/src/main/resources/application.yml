@@ -10,3 +10,6 @@ spring:
       label: master
       username: pluralsight
       password: pluralsight
+
+encrypt:
+  key: ABCDEFGHIJKLMNOPQRSTUVWXYZ

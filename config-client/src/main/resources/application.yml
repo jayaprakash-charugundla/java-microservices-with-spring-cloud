@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: s1rates
+  profiles:
+    active: qa
+  config:
+    import: optional:configserver:http://localhost:8888
+  cloud:
+    config:
+      label: master

@@ -59,6 +59,9 @@ http://localhost:8888/s2rates/default/master
 http://localhost:8888/s1rates/perf/master  
 http://localhost:8888/s3rates/perf/master  
 
+http://localhost:8080/rate  
+
+
 
 
 
